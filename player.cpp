@@ -1,28 +1,25 @@
 #include"player.h"
 using namespace std;
-Player::Player():name(" "),age(0),country(" ")
-{}
-Player::Player(string s,int n,string p)
+Player::Player():name(" "),age("")
 {
-	strcpy(name,s);
-	age=n;
-	strcpy(country,p);
+	cout<<"default ctor of plyr"<<endl;
 }
-void Player::display()
+Player::Player(string n,string a):name(n),age(a)
 {
-	cout<<"Name : "<<name<<endl;
-	cout<<"Age : "<<age<<endl;
-	cout<<"Country : "<<country<<endl;
+	cout<<"para ctor of plyr"<<endl;
 }
-void Player::accept()
+void Player::accept1()
 {
-	cout<<"Enter name : "<<endl;
+	cout<<"Enter name"<<endl;
 	cin.ignore();
 	getline(cin,name);
-	cout<<"Enter age : "<<endl;
-	cin>>age;
-	cout<<"Enter country : "<<endl;
+	cout<<"Enter age"<<endl;
 	cin.ignore();
-	getline(cin,country);
+	getline(cin,age);
+}
+void Player::display1()
+{
+	cout<<"Name is "<<name<<endl;
+	cout<<"age is  "<<age<<endl;
 
 }

@@ -1,16 +1,23 @@
-#include <iostream>
+#include"student.h"
 using namespace std;
-
-struct Student{
-	int roll;
-	char name[20];
-	float percent;
-};
-
-int main()
+Student::Student():name(" ")
 {
-	struct Student arr[5];
-	for(int i=0; i<5; i++)
-	{
-		cout << "Enter roll no.: ";
-		cin >> arr[i].roll;
+	cout<<"default ctor of stud"<<endl;
+}
+Student::Student(string a):name(a)
+{
+	 cout<<"para ctor of stud"<<endl;
+
+}
+void Student::accept()
+        {
+                cout<<"Enter name :"<<endl;
+                cin>>name;
+                a.accept();
+        }
+void Student::display()
+        {
+                cout<<"Name ="<<name<<endl;
+                a.display();
+        }
+

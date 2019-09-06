@@ -1,22 +1,17 @@
+#ifndef PLAYER
+#define PLAYER
 #include<iostream>
 #include<string>
 using namespace std;
 class Player
 {
-        private:
-                string name;
-                int age;
-                string country;
-        public:
-                Player();
-                Player(string,int,string);
-                void accept();
-                void sortArr();
-                void display();
+	private:
+		string name;
+		string age;
+	public:
+		Player();
+		Player(string n,string a);
+		void accept1();
+		void display1();
 };
-~                                                                                                                                                                                      
-~                                                                                                                                                                                      
-~                                                                                                                                                                                      
-~                                                                                                                                                                                      
-~                                                                                                                                                                                      
-~                                                       
+#endif
